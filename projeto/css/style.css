@@ -1,1 +1,98 @@
-/* Estilos do projeto */
+/* Estrutura macro do ecommerce */
+:root {
+	--page-gutter: clamp(1.25rem, 4vw, 4rem);
+	--section-space: clamp(4rem, 9vw, 8rem);
+	--line-color: #d9d9d9;
+	--surface-color: #f4f4f1;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: #171717;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-header,
+.site-footer,
+main > section {
+	padding-inline: var(--page-gutter);
+}
+
+.site-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 5rem;
+	border-bottom: 1px solid var(--line-color);
+}
+
+.site-logo {
+	width: 9rem;
+	height: 1.5rem;
+}
+
+.site-navigation,
+.footer-links {
+	min-width: 12rem;
+	min-height: 2rem;
+}
+
+main > section {
+	padding-block: var(--section-space);
+}
+
+.hero {
+	min-height: min(70vh, 42rem);
+	background-color: var(--surface-color);
+}
+
+.shoe-categories {
+	min-height: 18rem;
+}
+
+.featured-products {
+	min-height: 30rem;
+	background-color: var(--surface-color);
+}
+
+.products-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 1.5rem;
+}
+
+.site-footer {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 2rem;
+	min-height: 16rem;
+	padding-block: 3rem;
+	border-top: 1px solid var(--line-color);
+}
+
+.contact-information {
+	min-height: 4rem;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+@media (max-width: 700px) {
+	.products-grid,
+	.site-footer {
+		grid-template-columns: 1fr;
+	}
+}
