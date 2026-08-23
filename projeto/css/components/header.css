@@ -35,6 +35,13 @@
   margin-inline: auto;
 }
 
+.nav-center a,
+.nav-right a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
 .nav-center ul,
 .nav-right ul {
   display: flex;
@@ -59,7 +66,7 @@
   width: 1.5rem;
   height: 1.5rem;
   fill: none;
-  stroke: #7c3aed;
+   stroke: #6329a2;
   stroke-width: 1.7;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -67,7 +74,8 @@
 
 .nav-center a:hover,
 .nav-right a:hover{
-	color: #7c3aed;
+	color: #6329a2;
+  opacity: 0.7;
 }
 
 .nav-right a:hover svg {
