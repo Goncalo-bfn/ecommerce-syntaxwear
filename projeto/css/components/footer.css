@@ -1,0 +1,38 @@
+/* ==========================================================================
+   FOOTER / RODAPÉ
+   ========================================================================== */
+
+.site-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  border-top: 1px solid #e5e5e5;
+  padding-block: 3rem;
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Footer)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
